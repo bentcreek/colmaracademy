@@ -250,7 +250,7 @@ nav li a {
 }
 
 .information {
-  width: 40%;
+  max-width: 40%;
   display: flex;
   flex-direction: column;
   margin-left: 24px;
@@ -261,13 +261,13 @@ nav li a {
 
 .bulletin {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   padding: 16px 0px 16px 16px;
 }
 
 .bulletin-image {
   width: 35%;
-  height: auto;
+  height: 150px;
   margin-right: 16px;
 }
 
@@ -306,10 +306,11 @@ nav li a {
   }
 
   .information {
-    width: 100%;
+    max-width: 100%;
     margin: 0px;
     padding: 16px 16px 0px 16px;
   }
+
 
   .bulletin {
     width: 100%;
@@ -319,6 +320,7 @@ nav li a {
 
   .bulletin-image {
     width: 100%;
+    height: auto;
     margin: 0;
   }
 
@@ -348,7 +350,7 @@ nav li a {
 }
 
 .focus-areas {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-flow: row wrap;
   margin: 0px 72px;
@@ -358,6 +360,7 @@ nav li a {
 .focus-area {
   background-color: white;
   margin-bottom: 32px;
+  margin-right: 32px;
   width: 333px;
 }
 
