@@ -266,7 +266,7 @@ nav li a {
 }
 
 .bulletin-image {
-  width: 35%;
+  width: 150px;
   height: 150px;
   margin-right: 16px;
 }
@@ -353,8 +353,8 @@ nav li a {
   max-width: 100%;
   display: flex;
   flex-flow: row wrap;
-  margin: 0px 72px;
-  justify-content: space-between;
+  margin: 0px 0px;
+  justify-content: center;
 }
 
 .focus-area {
