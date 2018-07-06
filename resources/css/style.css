@@ -1,84 +1,51 @@
 /* "Tamming" Box Model With Reset */
 
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+
 }
 
 /* Universal Styles */
 
 html {
   font-size: 18px;
-  line-height: 1.4;
+  color: gray;
 }
 
 body {
   font-family: "Helvetica", sans-serif;
 }
 
-h1,
+h1, h2, h3, h4 {
+  color: darkslategray;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  width: 100%;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 h4 {
   font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p , span{
+  line-height: 1.4;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-}
 
-/* Main Banner */
-
-.main-banner {
-  background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 30rem;
-}
-
-.main-banner .container {
-}
-
-.headline {
-  position: relative;
-  top: 10rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.headline h1 {
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.2;
-  background-color: white;
-  color: black;
-  position: relative;
-  right: -2rem;
-  padding: 1.5rem 5rem;
-
-}
-
-@media only screen and (max-width: 470px) {
-  .main-banner {
-    height: 15rem;
-  }
-
-  .headline {
-    width: 100%;
-    padding: 1rem 2rem;
-    top: 10rem;
-  }
-
-  .headline h4 {
-    font-size: .77rem;
-  }
-
-  .headline h1 {
-    font-size: 1rem;
-  }
 }
 
 /* Navigation Bar */
@@ -88,33 +55,40 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 1rem;
+  top: 0;
   z-index: 1;
-  max-width: 960px;
   width: 100%;
-  background-color: cadetblue;
-  padding: 1rem 0;
-  color: white;
+  height: 64px;
+  background-color: white;
+  padding-right: 8px;
+  color: black;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  padding-left: 24px;
+  height: 32px;
 }
 
 .logo img {
-  height: 1.5rem;
+  height: 100%;
 }
 
 .logo span {
-  margin: 0 1rem;
+  margin: 0;
+  color: gray;
+}
+
+#colmar {
+  font-weight: bold;
+  color: black;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  max-width: 100%;
+  width: 100%;
 }
 
 nav ul {
@@ -122,7 +96,13 @@ nav ul {
 }
 
 nav li {
-  padding-right: 2rem;
+  padding-right: 16px;
+  background-color: white;
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
 }
 
 .mobile-nav {
@@ -130,7 +110,7 @@ nav li {
 }
 
 @media only screen and (max-width: 480px) {
-  .logo-text {
+  .logo {
     display: none;
   }
 
@@ -142,124 +122,481 @@ nav li {
   }
 
   .mobile-nav {
-    display: block;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 }
 
-/* Products and Business Information Section */
+/* Main Banner */
 
-.products,
-.business-info {
+.main-banner {
+  max-width: 100%;
+  margin-top: 64px;
+  background-color: lightgray;
   display: flex;
+  padding: 32px 0px 32px 24px;
+}
+
+.main-image {
+  max-width: 60%;
+  height: auto;
+  display: flex;
+  padding-right: 24px;
+}
+
+.main-image img{
+  width: 100%;
+  height: auto;
+}
+
+.headline {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.product {
-  width: 5rem;
-  height: 8rem;
-  margin: 3rem 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.headline h1 {
+  margin:0;
+  width: 100%;
 }
 
-.product-image {
-
+.headline h3 {
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  width: 100%;
 }
 
-.product-image img {
-  width: 3.5rem;
-}
-
-.product-image .ruler {
-  width: 5rem;
-}
-
-.description {
-  display: block;
-  text-align: center;
-  color: black;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  margin-right: 5%;
-}
-
-.info .title {
-  display: block;
-  width: 10rem;
-  padding: 0.5rem;
-  padding-left: 1.25rem;
-  background-color: cadetblue;
+.headline a {
+  text-decoration: none;
   color: white;
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
-.info .description {
+.startbutton {
+  background-color: darkslategray;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .main-banner {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .main-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-banner img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .headline {
+    margin: 32px 16px;
+    padding: 0;
+  }
+}
+
+/* Academy Info */
+
+.academy-info {
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 0px 0px 0px 24px;
+}
+
+.featured-story {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.featured-story img {
+  width: 100%;
+  height: auto;
+  padding: 32px 0px 0px 0px;
+}
+
+.featured-story h2 {
+  margin: 32px 0px 24px 0px;
+  width: 100%;
+}
+
+.featured-story p {
+  width: 100%;
+  margin: 0px;
+  padding-bottom: 32px;
+}
+
+#signature {
+  color: black;
+  padding-bottom: 32px;
+}
+
+.information {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  padding-top: 16px;
+  padding-left: 0px;
+  border-left: solid 1px lightgray;
+}
+
+.bulletin {
+  display: flex;
+  width: 100%;
+  padding: 16px 0px 16px 16px;
+}
+
+.bulletin-image {
+  width: 35%;
+  height: auto;
+  margin-right: 16px;
+}
+
+.bulletin-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.bulletin ul {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
 }
 
-@media only screen and (max-width: 1024px) {
-  .product {
-    width: 47%;
-  }
-
-  .product.glasses {
-    display: none;
-  }
+.bulletin .description {
+  text-align: left;
 }
 
-@media only screen and (max-width: 470px) {
-  .products,
-  .business-info {
-    flex-wrap: wrap;
+.bulletin a {
+  text-decoration: none;
+}
+
+.bulletin:nth-child(3){
+  background: lightgray;
+}
+
+@media only screen and (max-width: 480px) {
+  .academy-info {
+    padding: 0px;
   }
 
-  .product {
-    width: 90%;
-    margin: auto;
-  }
-
-  .product.watch {
+  .featured-story {
     display: none;
   }
 
-  .info {
-    width: 90%;
-    margin: 0.5rem auto;
+  .information {
+    width: 100%;
+    margin: 0px;
+    padding: 16px 16px 0px 16px;
   }
+
+  .bulletin {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .bulletin-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .bulletin ul {
+    margin: 32px 0px 32px 16px;
+  }
+
+  .bulletin:nth-child(3){
+    background: white;
+  }
+
+}
+
+/* Course Categories */
+
+.course-info {
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-heading h2 {
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.focus-areas {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0px 72px;
+  justify-content: space-between;
+}
+
+.focus-area {
+  background-color: white;
+  margin-bottom: 32px;
+  width: 333px;
+}
+
+.course-image img {
+  max-width: 100%;
+}
+
+.description-container {
+  max-width: 100%;
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  color: gray;
+}
+
+.course-heading {
+  font-weight: bold;
+  color: black;
+}
+
+.subheading {
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media only screen and (max-width: 480px) {
+  .course-info {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 0px 16px;
+  }
+
+  .course-heading h2 {
+    text-align: center;
+    margin: 32px 0px 16px 0px;
+  }
+
+  .focus-areas {
+    width: 100%;
+    margin: 0px 0px;
+  }
+
+  .focus-area {
+    background-color: lightgray;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 16px 0px 24px 16px;
+  }
+
+  .course-image {
+    display: none;
+  }
+
+  .description-container {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .course-heading {
+    font-weight: bold;
+    color: black;
+  }
+
+  .subheading {
+    display: none;
+  }
+
+  .description-container .description {
+    display: none;
+  }
+
+  .course-heading h4 {
+    font-weight: normal;
+  }
+
+}
+
+/* Thesis Exhibit */
+
+.thesis-exhibit {
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 32px 24px;
+}
+
+.thesis-heading {
+  width: 100%;
+  text-align: center;
+  padding: 32px 0px;
+}
+
+.studies {
+  display: flex;
+  align-items: flex-start;
+}
+
+.featured-study {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.featured-study video {
+  width: 100%;
+  height: auto;
+  padding: 0px 0px 0px 0px;
+}
+
+.featured-study h3 {
+  margin: 32px 0px 24px 0px;
+  width: 100%;
+}
+
+.featured-study p {
+  width: 100%;
+  margin: 0px;
+}
+
+.more-studies {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.study {
+  display: flex;
+  max-width: 100%;
+  padding: 16px 0px 16px 16px;
+}
+
+.study-image {
+  width: 35%;
+  height: auto;
+  margin-right: 16px;
+}
+
+.study-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.study ul {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.study h3 {
+}
+
+.study .description {
+  text-align: left;
+}
+
+.study:nth-child(1){
+  background: lightgray;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .thesis-exhibit {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 24px 0px;
+  }
+
+  .thesis-heading {
+    width: 100%;
+    text-align: center;
+    padding: 32px 0px 16px 0px;
+  }
+
+  .studies {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .featured-study {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .featured-study video {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .featured-study h3 {
+    display: none;
+  }
+
+  .featured-study p {
+    display: none;
+  }
+
+  .more-studies {
+    display: none;
+  }
+
 }
 
 /* Footer */
 
 footer {
-  margin-top: 5rem;
-  background-color: azure;
-  color: black;
-}
-
-footer .container {
+  max-width: 100%;
+  padding: 16px 24px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
-footer img {
-  margin: 4rem;
-  margin-left: 4rem;
-  margin-right: 1rem;
+footer span {
 }
 
-@media only screen and (max-width: 470px) {
+footer a {
+  text-decoration: none;
+  color: gray;
+}
+
+@media only screen and (max-width: 480px) {
   footer {
-    text-align: center;
+    max-width: 100%;
+    padding: 16px 24px;
+  }
+
+  footer .copyright-links {
+    display: none;
   }
 }
